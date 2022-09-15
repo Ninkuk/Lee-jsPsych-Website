@@ -7,9 +7,6 @@ function Dashboard(props) {
 	return (
 		<div className="container">
 			<h1 className="page-title">My Experiments</h1>
-			<div className="input-group mb-3">
-				<input type="text" className="form-control" placeholder="Search"/>
-			</div>
 			<div className="row">
 				<div className="col-3">
 					<div className="card">
@@ -22,6 +19,7 @@ function Dashboard(props) {
 					</div>
 				</div>
 			</div>
+			<button className="btn btn-primary position-absolute bottom-0 end-0 mb-5 me-5">+ Remix Experiment</button>
 		</div>
 	);
 }

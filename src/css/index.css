@@ -15,3 +15,8 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
+
+.page-title {
+	font-weight: 700;
+	margin-top: 5%;
+}
