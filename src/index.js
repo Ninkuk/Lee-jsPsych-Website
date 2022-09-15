@@ -16,6 +16,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Dashboard from "./Pages/Dashboard";
 import Login from "./Pages/Login";
+import CreateExperiment from './Pages/CreateExperiment';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -23,8 +24,9 @@ root.render(
 		<BrowserRouter>
 			<Routes>
 				<Route path="/" element={<App/>}/>
-				<Route path="/dashboard" element={<Dashboard/>}/>
 				<Route path="/login" element={<Login/>}/>
+				<Route path="/dashboard" element={<Dashboard/>}/>
+				<Route path="/create-experiment" element={<CreateExperiment/>} />
 
 				{/* Display 404 page when no route match */}
 				<Route path="*" element={<p>Error 404: Page not found</p>}/>
