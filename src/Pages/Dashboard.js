@@ -14,8 +14,6 @@ function Dashboard(props) {
 					<div className="card">
 						<div className="card-body">
 							Memory Limits
-							&nbsp;
-							<Link to="/invoices/6">Invoices</Link>
 							<button className="btn btn-success">Launch</button>
 						</div>
 					</div>
