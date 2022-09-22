@@ -14,9 +14,5 @@ body {
 	font-weight: 400;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-}
-
-.page-title {
-	font-weight: 700;
-	margin-top: 5%;
+	background-color: #ECEFF1;
 }
