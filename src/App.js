@@ -1,5 +1,5 @@
 import './css/App.css';
-import MemoryLimits from "./Experiments/MemoryLimits/MemoryLimits";
+import MemoryLimits from "./TemplateExperiments/MemoryLimits/MemoryLimits";
 import {Link, useNavigate} from "react-router-dom";
 import {useEffect} from "react";
 
