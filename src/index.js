@@ -1,10 +1,12 @@
 // React
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import reportWebVitals from './reportWebVitals';
 
 // Bootstrap CSS and JS
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
+import 'bootstrap-icons/font/bootstrap-icons.css';
 
 // React Router
 import {BrowserRouter, Routes, Route} from "react-router-dom";
@@ -12,11 +14,13 @@ import {BrowserRouter, Routes, Route} from "react-router-dom";
 // Global project CSS. Use App.css for page level css.
 import './css/index.css';
 
+// Pages
 import App from './App';
-import reportWebVitals from './reportWebVitals';
 import Dashboard from "./Pages/Dashboard";
 import Login from "./Pages/Login";
 import CreateExperiment from './Pages/CreateExperiment';
+import CreateExperimentForm from "./Pages/CreateExperimentForm";
+import ExperimentDashboard from "./Pages/ExperimentDashboard";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -24,9 +28,15 @@ root.render(
 		<BrowserRouter>
 			<Routes>
 				<Route path="/" element={<App/>}/>
-				<Route path="/login" element={<Login/>}/>
-				<Route path="/dashboard" element={<Dashboard/>}/>
-				<Route path="/create-experiment" element={<CreateExperiment/>} />
+				<Route path="login" element={<Login/>}/>
+				<Route path="dashboard" element={<Dashboard/>}/>
+
+				<Route path="experiment">
+					<Route path="new" element={<CreateExperiment/>}/>
+					<Route path="new/:experimentType" element={<CreateExperimentForm/>}/>
+					<Route path=":experiment" element={<ExperimentDashboard/>}/>
+				</Route>
+
 
 				{/* Display 404 page when no route match */}
 				<Route path="*" element={<p>Error 404: Page not found</p>}/>
