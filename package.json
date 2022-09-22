@@ -1,6 +1,7 @@
 {
   "name": "lee-jspsych-website",
   "version": "0.1.0",
+  "homepage": "https://ninkuk.github.io/science-of-me",
   "private": true,
   "dependencies": {
     "@jspsych/plugin-html-button-response": "^1.1.1",
@@ -13,6 +14,7 @@
     "bootstrap": "^5.2.0",
     "bootstrap-icons": "^1.9.1",
     "file-saver": "^2.0.5",
+    "gh-pages": "^4.0.0",
     "jspsych": "^7.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -21,6 +23,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
