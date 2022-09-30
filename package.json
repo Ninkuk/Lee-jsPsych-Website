@@ -1,7 +1,7 @@
 {
   "name": "lee-jspsych-website",
   "version": "0.1.0",
-  "homepage": "https://ninkuk.github.io/science-of-me",
+  "homepage": "https://ninkuk.github.io/",
   "private": true,
   "dependencies": {
     "@jspsych/plugin-html-button-response": "^1.1.1",
