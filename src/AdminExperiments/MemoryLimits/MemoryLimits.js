@@ -75,7 +75,7 @@ function MemoryLimits(props) {
 
 		const t1ResponseScreen = {
 			type: imageKeyboardResponse,
-			stimulus: '/MemoryLimits/Slide25.jpeg',
+			stimulus: '/img//MemoryLimits/Slide25.jpeg',
 			choices: ['0', '1', '2'],
 			prompt: "<p>How many of the objects in the first image are present in this image?<br>Press the appropriate number key.</p>",
 			data: {
@@ -107,7 +107,7 @@ function MemoryLimits(props) {
 
 		const t2ResponseScreen = {
 			type: imageKeyboardResponse,
-			stimulus: '/MemoryLimits/Slide5.jpeg',
+			stimulus: '/img//MemoryLimits/Slide5.jpeg',
 			choices: ['0', '1', '2', '3'],
 			prompt: "<p>How many of the objects in the first image are present in this image?<br>Press the appropriate number key.</p>",
 			data: {
@@ -139,7 +139,7 @@ function MemoryLimits(props) {
 
 		const t3ResponseScreen = {
 			type: imageKeyboardResponse,
-			stimulus: '/MemoryLimits/Slide15.jpeg',
+			stimulus: '/img//MemoryLimits/Slide15.jpeg',
 			choices: ['0', '1', '2', '3', '4'],
 			prompt: "<p>How many of the objects in the first image are present in this image?<br>Press the appropriate number key.</p>",
 			data: {
