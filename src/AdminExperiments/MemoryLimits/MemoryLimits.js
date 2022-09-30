@@ -66,7 +66,7 @@ function MemoryLimits(props) {
 		// TRIAL 1
 		const t1Stimulus = {
 			type: htmlKeyboardResponse,
-			stimulus: '<img src="/MemoryLimits/Slide21.jpeg" alt="">',
+			stimulus: '<img src="/img/MemoryLimits/Slide21.jpeg" alt="">',
 			choices: "NO_KEYS",
 			trial_duration: 1000,
 		};
@@ -98,7 +98,7 @@ function MemoryLimits(props) {
 		//	TRIAL 2
 		const t2Stimulus = {
 			type: htmlKeyboardResponse,
-			stimulus: '<img src="/MemoryLimits/Slide1.jpeg" alt="">',
+			stimulus: '<img src="/img/MemoryLimits/Slide1.jpeg" alt="">',
 			choices: "NO_KEYS",
 			trial_duration: 1000,
 		};
@@ -130,7 +130,7 @@ function MemoryLimits(props) {
 		//	TRIAL 3
 		const t3Stimulus = {
 			type: htmlKeyboardResponse,
-			stimulus: '<img src="/MemoryLimits/Slide13.jpeg" alt="">',
+			stimulus: '<img src="/img/MemoryLimits/Slide13.jpeg" alt="">',
 			choices: "NO_KEYS",
 			trial_duration: 1000,
 		};
