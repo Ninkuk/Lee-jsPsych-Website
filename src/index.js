@@ -21,6 +21,7 @@ import Login from "./Pages/Login";
 import CreateExperiment from './Pages/CreateExperiment';
 import CreateExperimentForm from "./Pages/CreateExperimentForm";
 import ExperimentDashboard from "./Pages/ExperimentDashboard";
+import MemoryLimits from "./TemplateExperiments/MemoryLimits/MemoryLimits";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -31,11 +32,15 @@ root.render(
 				<Route path="login" element={<Login/>}/>
 				<Route path="dashboard" element={<Dashboard/>}/>
 
+				{/* USER EXPERIMENTS */}
 				<Route path="experiment">
 					<Route path="new" element={<CreateExperiment/>}/>
 					<Route path="new/:experimentType" element={<CreateExperimentForm/>}/>
 					<Route path=":experiment" element={<ExperimentDashboard/>}/>
 				</Route>
+
+				{/* NON-USER EXPERIMENTS */}
+				<Route path="MemoryLimits" element={<MemoryLimits/>}/>
 
 
 				{/* Display 404 page when no route match */}
