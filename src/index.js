@@ -21,7 +21,8 @@ import Login from "./Pages/Login";
 import CreateExperiment from './Pages/CreateExperiment';
 import CreateExperimentForm from "./Pages/CreateExperimentForm";
 import ExperimentDashboard from "./Pages/ExperimentDashboard";
-import MemoryLimits from "./TemplateExperiments/MemoryLimits/MemoryLimits";
+import MemoryLimits from "./AdminExperiments/MemoryLimits/MemoryLimits";
+import _TemplateExperiment from "./AdminExperiments/_TemplateExperiment";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -32,14 +33,15 @@ root.render(
 				<Route path="login" element={<Login/>}/>
 				<Route path="dashboard" element={<Dashboard/>}/>
 
-				{/* USER EXPERIMENTS */}
+				{/* DYNAMIC USER EXPERIMENTS */}
 				<Route path="experiment">
 					<Route path="new" element={<CreateExperiment/>}/>
 					<Route path="new/:experimentType" element={<CreateExperimentForm/>}/>
 					<Route path=":experiment" element={<ExperimentDashboard/>}/>
 				</Route>
 
-				{/* NON-USER EXPERIMENTS */}
+				{/* STATIC ADMIN EXPERIMENTS */}
+				<Route path="template-experiment" element={<_TemplateExperiment/>}/>
 				<Route path="MemoryLimits" element={<MemoryLimits/>}/>
 
 

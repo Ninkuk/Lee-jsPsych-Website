@@ -1,13 +1,14 @@
 import './css/App.css';
-import MemoryLimits from "./TemplateExperiments/MemoryLimits/MemoryLimits";
-import {Link, useNavigate} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import {useEffect} from "react";
 
+// UNDER CONSTRUCTION
+// This just leads to dashboard lol
 function App() {
 	let navigate = useNavigate();
 
 	useEffect(() => {
-		var loggedIn = true;
+		let loggedIn = true;
 
 		if (loggedIn) {
 			navigate("/dashboard");
