@@ -11,11 +11,11 @@
 
 ### How to install jsPsych plugins?
 
-1. You can find the list of plugins here: https://www.jspsych.org/7.2/plugins/list-of-plugins/
+1. You can find the list of plugins here: https://www.jspsych.org/7.3/plugins/list-of-plugins/
 2. Click on the plugin you want to use
 3. Go to the "install" tab
 4. Here you can find the npm install command and the import code
-    * for example, to install [html-keyboard-response](https://www.jspsych.org/7.2/plugins/html-keyboard-response/) =>
+    * for example, to install [html-keyboard-response](https://www.jspsych.org/7.3/plugins/html-keyboard-response/) =>
         * `npm install @jspsych/plugin-html-keyboard-response`
         * `import htmlKeyboardResponse from '@jspsych/plugin-html-keyboard-response';`
 
