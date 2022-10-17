@@ -17,10 +17,12 @@ import './css/index.css';
 // Pages
 import App from './App';
 import Dashboard from "./Pages/Dashboard";
-import Login from "./Pages/Login";
+import Auth from "./Pages/Auth";
 import CreateExperiment from './Pages/CreateExperiment';
 import CreateExperimentForm from "./Pages/CreateExperimentForm";
 import ExperimentDashboard from "./Pages/ExperimentDashboard";
+
+// Experiments
 import MemoryLimits from "./AdminExperiments/MemoryLimits/MemoryLimits";
 import _TemplateExperiment from "./AdminExperiments/_TemplateExperiment";
 
@@ -30,7 +32,7 @@ root.render(
 		<BrowserRouter>
 			<Routes>
 				<Route path="/" element={<App/>}/>
-				<Route path="login" element={<Login/>}/>
+				<Route path="auth" element={<Auth/>}/>
 				<Route path="dashboard" element={<Dashboard/>}/>
 
 				{/* DYNAMIC USER EXPERIMENTS */}

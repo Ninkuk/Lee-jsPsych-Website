@@ -8,12 +8,12 @@ function App() {
 	let navigate = useNavigate();
 
 	useEffect(() => {
-		let loggedIn = true;
+		let loggedIn = false;
 
 		if (loggedIn) {
 			navigate("/dashboard");
 		} else {
-			navigate("/login")
+			navigate("/auth")
 		}
 	}, []);
 	return (
