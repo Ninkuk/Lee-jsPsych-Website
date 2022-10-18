@@ -9,31 +9,27 @@ function ExperimentCard(props) {
 			<div className="card h-100">
 				<div className="card-header text-muted">{props.experiment.type}</div>
 				<div className="card-body">
-					<h5 className="card-title">{props.experiment.title}</h5>
+					<h5 className="card-title" id={props.edit && "editable-card"} role="button"
+					    onClick={() => {
+						    props.edit && navigate('/experiment/bruh')
+					    }}>
+						{props.experiment.title}
+					</h5>
 					<p className="card-text fs-6 text-secondary">
 						Brief description of the experiment here.
 					</p>
-					<div className="row align-items-end">
-						<div className="col">
-							<div className="btn-group" role="group" aria-label="Basic example">
-								{
-									props.edit
-									&&
-									<button type="button" className="btn btn-outline-warning btn-sm"
-									        onClick={() => navigate('/experiment/qwert123')}>
-										<i className="bi bi-pencil-square"></i> Edit
-									</button>
-								}
-								<button type="button" className="btn btn-outline-success btn-sm"
-								        onClick={() => window.open(props.experiment.title.replace(" ", ""), "_blank")}>
-									<i className="bi bi-play-fill"></i> Run
-								</button>
-							</div>
+					<div className="row g-1 justify-content-between">
+						<div className="col-auto">
+							<button type="button" className="btn btn-success btn-sm"
+							        onClick={() => window.open(props.experiment.title.replace(" ", ""), "_blank")}>
+								<i className="bi bi-play-fill"></i> Run
+							</button>
 						</div>
 						<div className="col-auto">
-							<i className="bi bi-share" role="button" onClick={() => {
-								props.alert(true)
-							}}/>
+							<button type="button" className="btn btn-outline-secondary btn-sm"
+							        onClick={() => props.alert(true)}>
+								<i className="bi bi-share-fill"></i> Share
+							</button>
 						</div>
 					</div>
 				</div>
