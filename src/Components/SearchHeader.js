@@ -2,7 +2,7 @@ import React from 'react';
 
 function SearchHeader(props) {
 	return (
-		<div className="mt-4">
+		<div>
 			<h1 className="page-title fw-bold fs-3 text-dark">{props.title}</h1>
 			<p className="text-muted">{props.subtitle}</p>
 			<div className="input-group mb-3">

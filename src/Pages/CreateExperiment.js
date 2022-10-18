@@ -10,9 +10,10 @@ function CreateExperiment() {
 
 	return (
 		<div className="container">
-			<i className="bi bi-arrow-left opacity-50" style={{fontSize: "x-large"}} role={"button"} onClick={() => {
-				navigate('/dashboard')
-			}}></i>
+			<i className="bi bi-arrow-left opacity-50 fs-3" role={"button"}
+			   onClick={() => {
+				   navigate('/dashboard')
+			   }}/>
 			<SearchHeader title="New Experiment" subtitle="Select an experiment from the available templates below"/>
 			<div className="new-experiment-cards mt-4">
 				<div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
