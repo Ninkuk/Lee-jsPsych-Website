@@ -1,41 +1,82 @@
-import React from 'react';
-import {useNavigate} from "react-router-dom";
-import SearchHeader from "../Components/SearchHeader";
+import React, {useEffect, useState} from 'react';
+import {Link, useNavigate} from "react-router-dom";
 import ExperimentCard from "../Components/ExperimentCard";
 
 function Dashboard(props) {
 	let navigate = useNavigate();
 
+	const [showAlert, setShowAlert] = useState(false);
+
+	useEffect(() => {
+		if (showAlert) {
+			setTimeout(() => {
+				setShowAlert(false)
+			}, 2000);
+		}
+	}, [showAlert])
+
 	let userExperiments = [
-		{title: "Faces", type: "Stimuli to Multiple Choice"},
-		{title: "Memory Limits", type: "Stimuli to Numerical"},
-		{title: "Peripheral Vision", type: "Stimuli to Alphabet"},
-		{title: "Saccade Time", type: "Stimuli to Alphabet"}
+		{title: "My Experiment 1", type: "Stimuli to Multiple Choice"},
+		{title: "My Experiment 2", type: "Stimuli to Numerical"},
+		{title: "My Experiment 3", type: "Stimuli to Alphabet"},
+		{title: "My Experiment 4", type: "Stimuli to Alphabet"}
 	]
 
 	return (
 		<div className="container">
-			<SearchHeader title="My Experiments" subtitle="View, modify and run all your experiments" contentList={""}/>
-			{/*FILTER*/}
-			{/*<div>*/}
-			{/*	<h3 className="fs-6 fw-semibold">Experiment Type</h3>*/}
-			{/*	<div className="row">*/}
-			{/*		<div className="col"></div>*/}
-			{/*	</div>*/}
-			{/*</div>*/}
+			{/*Header*/}
+			<div className="row justify-content-between mt-4">
+				<div className="col-auto">
+					<div className="dropdown dropend">
+						<h1 className="page-title fw-bold fs-3 text-dark dropdown-toggle" data-bs-toggle="dropdown"
+						    role="button">
+							My Experiments
+						</h1>
+						<ul className="dropdown-menu dropdown-menu-dark">
+							<li>
+								<Link className="dropdown-item" to="/featured">Featured Experiments</Link>
+							</li>
+						</ul>
+					</div>
+					<p className="text-muted">View, modify and run all your experiments</p>
+				</div>
+				<div className="col-auto">
+					<i className="bi bi-person-circle text-muted opacity-75 fs-3 btn btn-sm btn-link" role="button"
+					   data-bs-toggle="dropdown"/>
+					<ul className="dropdown-menu dropdown-menu-dark dropdown-menu-end">
+						<li>
+							<Link className="dropdown-item" to="/settings">Settings</Link>
+							<Link className="dropdown-item" to="/auth">Sign Out</Link>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div className="input-group mb-3">
+				<span className="input-group-text bg-transparent border-end-0"><i className="bi bi-search opacity-75"/></span>
+				<input type="text" className="form-control fs-6 bg-transparent border-start-0" placeholder="Search"/>
+			</div>
+
+			{/* Cards */}
 			<div className="experiment-cards mt-4">
 				<div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
 					{
 						userExperiments.map(experiment => (
-							<ExperimentCard title={experiment.title} type={experiment.type}/>
+							<ExperimentCard experiment={experiment} edit={true} alert={setShowAlert}/>
 						))
 					}
 				</div>
 			</div>
 			<button className="btn btn-primary position-absolute bottom-0 end-0 mb-5 me-5 rounded-pill"
 			        onClick={() => navigate('/experiment/new')}>
-				<i className="bi bi-plus-circle-dotted"></i> Create Experiment
+				<i className="bi bi-plus-circle"></i> Create Experiment
 			</button>
+
+			{
+				showAlert &&
+				<div className="alert alert-success position-absolute bottom-0 start-50 translate-middle" role="alert">
+					Successfully copied experiment link!
+				</div>
+			}
 		</div>
 	);
 }
