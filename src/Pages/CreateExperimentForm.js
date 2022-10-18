@@ -22,13 +22,15 @@ function CreateExperimentForm(props) {
 
 	return (
 		<div className="container">
-			<i className="bi bi-arrow-left opacity-50" style={{fontSize: "x-large"}} role={"button"} onClick={() => {
+			<i className="bi bi-arrow-left opacity-50 fs-3" role={"button"} onClick={() => {
 				navigate("/experiment/new")
 			}}></i>
 
-			{
-				getFormToLoad()
-			}
+			<div className="mb-4">
+				{
+					getFormToLoad()
+				}
+			</div>
 
 		</div>
 	);

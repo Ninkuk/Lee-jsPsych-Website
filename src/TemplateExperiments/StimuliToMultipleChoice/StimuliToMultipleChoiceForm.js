@@ -50,9 +50,11 @@ function StimuliToMultipleChoiceForm(props) {
 	}
 
 	return (
-		<div className="my-4">
+		<div>
 			<h1 className="page-title fw-bold fs-3 text-dark">Stimuli to Multiple Choice</h1>
-			<p className="text-muted">The experiment will show a stimuli (image) followed by a question and four image answer options.</p>
+			<p className="text-muted">
+				The experiment will show a stimuli (image) followed by a question and four image answer options.
+			</p>
 			<div className="row mt-4 g-2">
 				<div className="col-md-6">
 					<div className="row">

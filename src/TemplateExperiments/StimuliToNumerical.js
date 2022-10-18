@@ -48,7 +48,7 @@ function StimuliToNumerical(props) {
 	}, [questions])
 
 	return (
-		<div className="my-4">
+		<div>
 			<h1 className="page-title fw-bold fs-3 text-dark">Stimuli to Numerical</h1>
 			<p className="text-muted">
 				The experiment will show a stimuli followed by a question requiring a numerical [0-9] answer.
