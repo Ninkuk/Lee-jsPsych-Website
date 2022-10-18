@@ -11,6 +11,7 @@ function Auth(props) {
 			{
 				authStatus ? <Login authState={setAuthStatus}></Login> : <Register authState={setAuthStatus}></Register>
 			}
+			<p className="text-danger fw-bold text-center mt-2">Demo only - please press login or register to proceed to the dashboard</p>
 		</div>
 	);
 }

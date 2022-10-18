@@ -1,6 +1,9 @@
 import React, {useState} from 'react';
+import {useNavigate} from "react-router-dom";
 
 function Login(props) {
+	let navigate = useNavigate();
+
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 
@@ -15,7 +18,7 @@ function Login(props) {
 				<div className="text-end">
 					<button type="button" className="btn btn-light btn-sm mb-3 text-muted">Forgot Password?</button>
 				</div>
-				<button className="btn btn-primary w-100 mb-3">Login</button>
+				<button className="btn btn-primary w-100 mb-3" onClick={() => navigate("/dashboard")}>Login</button>
 				<p className="text-center text-muted">or</p>
 				<button className="btn btn-outline-secondary w-100 mb-3">
 					<i className="bi bi-google"></i> Continue with Google

@@ -8,7 +8,7 @@ function App() {
 	let navigate = useNavigate();
 
 	useEffect(() => {
-		let loggedIn = false;
+		let loggedIn = true;
 
 		if (loggedIn) {
 			navigate("/dashboard");
