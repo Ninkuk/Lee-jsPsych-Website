@@ -4,6 +4,7 @@ import {useNavigate} from "react-router-dom";
 function Register(props) {
 	let navigate = useNavigate();
 
+	const [name, setName] = useState("");
 	const [email, setEmail] = useState("");
 	const [password, setPassword] = useState("");
 
@@ -11,6 +12,8 @@ function Register(props) {
 		<div className="card">
 			<div className="card-body">
 				<h1 className="card-title fw-bold mb-3">Register</h1>
+				<input type="text" className="form-control mb-3" id="nameInput" placeholder="Full Name"
+				       onChange={(e) => setName(e.target.value)}/>
 				<input type="email" className="form-control mb-3" id="emailInput" placeholder="Email Address"
 				       onChange={(e) => setEmail(e.target.value)}/>
 				<input type="password" className="form-control mb-3" id="passwordInput" placeholder="Password"
