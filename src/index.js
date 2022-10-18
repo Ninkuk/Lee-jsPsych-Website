@@ -25,6 +25,13 @@ import ExperimentDashboard from "./Pages/ExperimentDashboard";
 // Experiments
 import MemoryLimits from "./AdminExperiments/MemoryLimits/MemoryLimits";
 import _TemplateExperiment from "./AdminExperiments/_TemplateExperiment";
+import FeaturedDashboard from "./Pages/FeaturedDashboard";
+
+// AWS Amplify
+import {Amplify} from 'aws-amplify';
+import awsExports from './aws-exports';
+
+Amplify.configure(awsExports);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -34,6 +41,7 @@ root.render(
 				<Route path="/" element={<App/>}/>
 				<Route path="auth" element={<Auth/>}/>
 				<Route path="dashboard" element={<Dashboard/>}/>
+				<Route path="featured" element={<FeaturedDashboard/>}/>
 
 				{/* DYNAMIC USER EXPERIMENTS */}
 				<Route path="experiment">
